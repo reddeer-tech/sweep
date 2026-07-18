@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+        <title>Sweep Updates</title>
+        <link>https://raw.githubusercontent.com/reddeer-tech/sweep/main/appcast-macos.xml</link>
+        <description>Most recent updates for Sweep</description>
+    <language>en</language>
+    <item>
+            <title>Sweep 0.0.2</title>
+            <link>https://github.com/reddeer-tech/sweep/releases/download/v0.0.2/Sweep-0.0.2-macos.dmg</link>
+      <sparkle:version>230</sparkle:version>
+      <sparkle:shortVersionString>0.0.2</sparkle:shortVersionString>
+            <sparkle:releaseNotesLink>https://raw.githubusercontent.com/reddeer-tech/sweep/main/release-notes-0.0.2.html</sparkle:releaseNotesLink>
+            <pubDate>Sat, 18 Jul 2026 22:44:56 GMT</pubDate>
+      <enclosure 
+                url="https://github.com/reddeer-tech/sweep/releases/download/v0.0.2/Sweep-0.0.2-macos.dmg" 
+                length="103775173" 
+        type="application/octet-stream" 
+                sparkle:edSignature="pMPsoWiC8j4wwXkwXUhAsmiK9u5Zndev57Zp5y9shpkUOjigNvd67lPlT82FaQ/RLBQbtTu8u8tPhL4pyBSiCw==" />
+            <sparkle:minimumSystemVersion>10.13</sparkle:minimumSystemVersion>
+    </item>
+  </channel>
+</rss>

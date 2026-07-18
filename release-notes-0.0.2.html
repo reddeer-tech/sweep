@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="color-scheme" content="light dark">
+    <title>Sweep v0.0.2 Release Notes</title>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --fg: #1d1d1f;
+            --muted: #6e6e73;
+            --link: #0066cc;
+            --code-bg: #f0f0f2;
+            --code-fg: #1d1d1f;
+            --border: #d2d2d7;
+            --quote-bg: #f5f5f7;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #1e1e1e;
+                --fg: #f5f5f7;
+                --muted: #a1a1a6;
+                --link: #4ea3ff;
+                --code-bg: #2c2c2e;
+                --code-fg: #f5f5f7;
+                --border: #3a3a3c;
+                --quote-bg: #2c2c2e;
+            }
+        }
+        html, body {
+            background: var(--bg);
+            color: var(--fg);
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+            padding: 20px;
+            line-height: 1.55;
+            font-size: 14px;
+            -webkit-font-smoothing: antialiased;
+        }
+        h1 { font-size: 22px; margin: 0 0 14px; font-weight: 600; }
+        h2 { font-size: 17px; margin: 22px 0 8px; font-weight: 600; }
+        h3 { font-size: 15px; margin: 18px 0 6px; font-weight: 600; }
+        h4, h5, h6 { font-size: 14px; margin: 14px 0 6px; font-weight: 600; }
+        p { margin: 8px 0; }
+        ul, ol { padding-left: 22px; margin: 8px 0; }
+        li { margin: 4px 0; line-height: 1.55; }
+        a { color: var(--link); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        code {
+            background: var(--code-bg);
+            color: var(--code-fg);
+            padding: 1px 5px;
+            border-radius: 4px;
+            font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+            font-size: 12.5px;
+        }
+        pre {
+            background: var(--code-bg);
+            color: var(--code-fg);
+            padding: 10px 12px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-size: 12.5px;
+            line-height: 1.5;
+        }
+        pre code { background: none; padding: 0; border-radius: 0; }
+        blockquote {
+            margin: 10px 0;
+            padding: 6px 12px;
+            border-left: 3px solid var(--border);
+            background: var(--quote-bg);
+            color: var(--muted);
+        }
+        blockquote p { margin: 4px 0; }
+        hr { border: none; border-top: 1px solid var(--border); margin: 16px 0; }
+        strong { font-weight: 600; }
+    </style>
+</head>
+<body>
+<h1>What's New</h1>
+<h2>Provider API key testing &amp; smart model dropdown</h2>
+<ul>
+<li><strong>Test button</strong> next to each API key in OpenClaw settings (OpenAI, Anthropic, Google, OpenRouter). Click <em>Test</em> and the app actually hits the provider's <code>/models</code> endpoint to verify the key works — the status pill turns green for <em>valid</em>, red for <em>invalid</em> (with a tooltip showing the provider's error), or yellow while testing.</li>
+<li><strong>Save</strong> automatically tests every non-empty key, so you get instant validation when you paste in a fresh key.</li>
+<li><strong>Default Model dropdown is now populated from real fetched models</strong>, not a hardcoded list. Only models from providers whose key tested as <em>valid</em> show up — because the available models genuinely differ from key to key based on your account tier, region, and beta access.</li>
+<li>Tested provider models also flow up to the web and mobile chat clients, so you see the same dropdown everywhere.</li>
+</ul>
+<h2>Reliability fixes</h2>
+<ul>
+<li><strong>Fixed: two devices on the same account would collide.</strong> Two Macs under one account with the same default hostname (the common <code>&lt;user&gt;-MacBook-Pro.local</code>) used to silently share a single machine row and machine token, making them appear as one device to the relay. Each device now gets its own independent identity, online status, and chat traffic.</li>
+<li><strong>Fixed: machine recovery now refreshes your login first.</strong> If your machine token gets invalidated (e.g. you removed the device from another client), the app refreshes your auth token before re-registering — so you stay logged in instead of getting bounced to the login screen.</li>
+<li><strong>Better release notes formatting.</strong> The Sparkle update dialog now renders headings, lists, links, code, blockquotes, and emphasis properly.</li>
+</ul>
+</body>
+</html>
