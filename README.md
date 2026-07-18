@@ -6,7 +6,7 @@
 
 Scan → review → clean. Nothing is ever deleted automatically.
 
-### [⬇︎ Download the latest release](https://github.com/reddeer-tech/sweep/releases)
+### [⬇︎ Download Sweep](https://github.com/reddeer-tech/sweep/releases/latest/download/Sweep.dmg)
 
 </div>
 
@@ -20,18 +20,15 @@ Sweep finds space you can safely reclaim across **macOS, your apps, and develope
 
 ## Install
 
-1. Download the DMG from the [Releases](https://github.com/reddeer-tech/sweep/releases) page.
+1. [Download the DMG](https://github.com/reddeer-tech/sweep/releases/latest/download/Sweep.dmg) (or pick a version on the [Releases](https://github.com/reddeer-tech/sweep/releases) page).
 2. Open it and drag **Sweep** to Applications.
 3. On first launch, grant **Full Disk Access** when prompted so Sweep can safely find everything.
 
 Sweep is code-signed with a Developer ID and notarized by Apple.
 
-## Update feed
+## Updates
 
-This repository also hosts the Sparkle appcasts the app checks for updates:
-
-- **Stable:** [`prod/appcast-macos.xml`](prod/appcast-macos.xml)
-- **Beta:** [`dev/appcast-macos.xml`](dev/appcast-macos.xml)
+The app checks this repository's Sparkle appcast for updates: [`appcast-macos.xml`](appcast-macos.xml).
 
 ---
 
