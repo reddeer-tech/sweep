@@ -4,7 +4,7 @@
 
 **A beautiful, safe disk cleaner for macOS.**
 
-Scan → review → clean. Nothing is ever deleted automatically.
+Scan → review → clean. Nothing is deleted unless you confirm it, or switch on a cleaning schedule yourself
 
 ### [⬇︎ Download Sweep](https://github.com/reddeer-tech/sweep/releases/latest/download/Sweep.dmg)
 
@@ -14,7 +14,7 @@ Scan → review → clean. Nothing is ever deleted automatically.
 
 Sweep finds space you can safely reclaim across **macOS, your apps, and developer tools** — old caches, Time Machine local snapshots, forgotten iPhone backups, leftover installers, and data from apps you've deleted. It shows you exactly what it found, keeps the newest/active versions, and lets you review every item before removing anything.
 
-- **Safe by design** — nothing is removed without your review and confirmation; higher-stakes items go to the Trash (recoverable).
+- **Safe by design** — nothing is removed without your review and confirmation, except by a cleaning schedule you switch on yourself (every schedule is off until you do); higher-stakes items go to the Trash (recoverable).
 - **Universal** — runs natively on Apple Silicon and Intel Macs.
 - **Auto-updating** — via Sparkle.
 
