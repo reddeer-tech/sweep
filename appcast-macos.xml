@@ -6,17 +6,17 @@
         <description>Most recent updates for Sweep</description>
     <language>en</language>
     <item>
-            <title>Sweep 1.1.0</title>
-            <link>https://github.com/reddeer-tech/sweep/releases/download/v1.1.0/Sweep-1.1.0-macos.dmg</link>
-      <sparkle:version>242</sparkle:version>
-      <sparkle:shortVersionString>1.1.0</sparkle:shortVersionString>
+            <title>Sweep 1.1.1</title>
+            <link>https://github.com/reddeer-tech/sweep/releases/download/v1.1.1/Sweep-1.1.1-macos.dmg</link>
+      <sparkle:version>243</sparkle:version>
+      <sparkle:shortVersionString>1.1.1</sparkle:shortVersionString>
             <description><![CDATA[
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="color-scheme" content="light dark">
-    <title>Sweep v1.1.0 Release Notes</title>
+    <title>Sweep v1.1.1 Release Notes</title>
     <style>
         :root {
             --bg: #ffffff;
@@ -91,18 +91,21 @@
     </style>
 </head>
 <body>
-<h1>What's New in 1.1.0</h1>
-<h2>Sweep watches your Mac from the menu bar</h2>
+<h1>What's New in 1.1.1</h1>
+<h2>Nothing is ticked after a scan</h2>
+<p>After a scan every row now starts unticked, so nothing is removed unless you tick it. Select safe still ticks every row Sweep rates as safe in one click, and Quick Clean still picks only those</p>
+<h2>Also new in 1.1.0</h2>
+<h3>Sweep watches your Mac from the menu bar</h3>
 <p>Sweep now stays in the menu bar when you close its window and checks your Mac every 30 minutes, or every 15 minutes, hour or 3 hours if you pick that in Settings. It tells you when the disk is almost full or filling fast and which app is writing to it, when Time Machine keeps failing or stops making progress, when macOS has moved a lot of memory to disk, and when a program keeps leaving copies in your temp folder. It never deletes anything by itself, and your schedules keep running while the window is closed</p>
 <p>Closing the window also puts it away to give its memory back, the menu-bar icon shows the latest check and opens Sweep again. Sweep now starts when you log in and asks once to send notifications after this update, you can turn either off in Settings</p>
-<h2>Time Machine</h2>
+<h3>Time Machine</h3>
 <ul>
 <li>Sweep never removes local snapshots while a backup is running, removing them then makes the backup fail</li>
 <li>A backup that is holding space can be stopped from the Time Machine Snapshots section, which then releases its space</li>
 <li>The newest snapshot is its own row and is kept unless you tick it</li>
 <li>Optimize ▸ Health shows when your last good backup finished and when Time Machine keeps trying without finishing, including when the disk was too full for its snapshot</li>
 </ul>
-<h2>Clean</h2>
+<h3>Clean</h3>
 <ul>
 <li>A log folder over 1 GB that an app still writes to now offers its logs older than 7 days, they go to the Trash</li>
 <li>Old logs of backup apps can be compressed instead of deleted, every log is kept</li>
@@ -110,7 +113,7 @@
 <li>Graphics caches of current Chromium browsers are included</li>
 <li>The Docker rows now say that current Docker Desktop hands pruned space back to macOS</li>
 </ul>
-<h2>Optimize ▸ Health</h2>
+<h3>Optimize ▸ Health</h3>
 <ul>
 <li>What is filling your disk, when it is low</li>
 <li>Folders piling up in your temp folder</li>
@@ -119,12 +122,12 @@
 </body>
 </html>
             ]]></description>
-            <pubDate>Wed, 11 Nov 2026 09:21:04 GMT</pubDate>
+            <pubDate>Wed, 11 Nov 2026 09:50:38 GMT</pubDate>
       <enclosure 
-                url="https://github.com/reddeer-tech/sweep/releases/download/v1.1.0/Sweep-1.1.0-macos.dmg" 
-                length="107615435" 
+                url="https://github.com/reddeer-tech/sweep/releases/download/v1.1.1/Sweep-1.1.1-macos.dmg" 
+                length="107615865" 
         type="application/octet-stream" 
-                sparkle:edSignature="LLFgLAq0gwPipPAx7EpH7nvBaKK81h/lYeqFQCyfe34aTIzJlQYmUXGmbSmJHfebUk0/LV6jXN2cyveLs4+EAg==" />
+                sparkle:edSignature="jt+ptxFURhZztoXFTU6cANP0fboFhFgwJU4dXFI6NoPFrkobj22cDT58EslOdTVCnDJ1yhenfTSuJfpC82EoDA==" />
             <sparkle:minimumSystemVersion>10.13</sparkle:minimumSystemVersion>
     </item>
   </channel>
