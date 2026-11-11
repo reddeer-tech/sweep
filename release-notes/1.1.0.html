@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="color-scheme" content="light dark">
+    <title>Sweep v1.1.0 Release Notes</title>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --fg: #1d1d1f;
+            --muted: #6e6e73;
+            --link: #0066cc;
+            --code-bg: #f0f0f2;
+            --code-fg: #1d1d1f;
+            --border: #d2d2d7;
+            --quote-bg: #f5f5f7;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #1e1e1e;
+                --fg: #f5f5f7;
+                --muted: #a1a1a6;
+                --link: #4ea3ff;
+                --code-bg: #2c2c2e;
+                --code-fg: #f5f5f7;
+                --border: #3a3a3c;
+                --quote-bg: #2c2c2e;
+            }
+        }
+        html, body {
+            background: var(--bg);
+            color: var(--fg);
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+            padding: 20px;
+            line-height: 1.55;
+            font-size: 14px;
+            -webkit-font-smoothing: antialiased;
+        }
+        h1 { font-size: 22px; margin: 0 0 14px; font-weight: 600; }
+        h2 { font-size: 17px; margin: 22px 0 8px; font-weight: 600; }
+        h3 { font-size: 15px; margin: 18px 0 6px; font-weight: 600; }
+        h4, h5, h6 { font-size: 14px; margin: 14px 0 6px; font-weight: 600; }
+        p { margin: 8px 0; }
+        ul, ol { padding-left: 22px; margin: 8px 0; }
+        li { margin: 4px 0; line-height: 1.55; }
+        a { color: var(--link); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        code {
+            background: var(--code-bg);
+            color: var(--code-fg);
+            padding: 1px 5px;
+            border-radius: 4px;
+            font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+            font-size: 12.5px;
+        }
+        pre {
+            background: var(--code-bg);
+            color: var(--code-fg);
+            padding: 10px 12px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-size: 12.5px;
+            line-height: 1.5;
+        }
+        pre code { background: none; padding: 0; border-radius: 0; }
+        blockquote {
+            margin: 10px 0;
+            padding: 6px 12px;
+            border-left: 3px solid var(--border);
+            background: var(--quote-bg);
+            color: var(--muted);
+        }
+        blockquote p { margin: 4px 0; }
+        hr { border: none; border-top: 1px solid var(--border); margin: 16px 0; }
+        strong { font-weight: 600; }
+    </style>
+</head>
+<body>
+<h1>What's New in 1.1.0</h1>
+<h2>Sweep watches your Mac from the menu bar</h2>
+<p>Sweep now stays in the menu bar when you close its window and checks your Mac every 30 minutes, or every 15 minutes, hour or 3 hours if you pick that in Settings. It tells you when the disk is almost full or filling fast and which app is writing to it, when Time Machine keeps failing or stops making progress, when macOS has moved a lot of memory to disk, and when a program keeps leaving copies in your temp folder. It never deletes anything by itself, and your schedules keep running while the window is closed</p>
+<p>Closing the window also puts it away to give its memory back, the menu-bar icon shows the latest check and opens Sweep again. Sweep now starts when you log in and asks once to send notifications after this update, you can turn either off in Settings</p>
+<h2>Time Machine</h2>
+<ul>
+<li>Sweep never removes local snapshots while a backup is running, removing them then makes the backup fail</li>
+<li>A backup that is holding space can be stopped from the Time Machine Snapshots section, which then releases its space</li>
+<li>The newest snapshot is its own row and is kept unless you tick it</li>
+<li>Optimize ▸ Health shows when your last good backup finished and when Time Machine keeps trying without finishing, including when the disk was too full for its snapshot</li>
+</ul>
+<h2>Clean</h2>
+<ul>
+<li>A log folder over 1 GB that an app still writes to now offers its logs older than 7 days, they go to the Trash</li>
+<li>Old logs of backup apps can be compressed instead of deleted, every log is kept</li>
+<li>The uv cache waits while uv tools are running instead of failing, and removes only what nothing uses</li>
+<li>Graphics caches of current Chromium browsers are included</li>
+<li>The Docker rows now say that current Docker Desktop hands pruned space back to macOS</li>
+</ul>
+<h2>Optimize ▸ Health</h2>
+<ul>
+<li>What is filling your disk, when it is low</li>
+<li>Folders piling up in your temp folder</li>
+<li>A lot of memory moved to disk, with a restart as the fix</li>
+</ul>
+</body>
+</html>

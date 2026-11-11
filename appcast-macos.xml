@@ -6,17 +6,17 @@
         <description>Most recent updates for Sweep</description>
     <language>en</language>
     <item>
-            <title>Sweep 1.0.1</title>
-            <link>https://github.com/reddeer-tech/sweep/releases/download/v1.0.1/Sweep-1.0.1-macos.dmg</link>
-      <sparkle:version>241</sparkle:version>
-      <sparkle:shortVersionString>1.0.1</sparkle:shortVersionString>
+            <title>Sweep 1.1.0</title>
+            <link>https://github.com/reddeer-tech/sweep/releases/download/v1.1.0/Sweep-1.1.0-macos.dmg</link>
+      <sparkle:version>242</sparkle:version>
+      <sparkle:shortVersionString>1.1.0</sparkle:shortVersionString>
             <description><![CDATA[
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="color-scheme" content="light dark">
-    <title>Sweep v1.0.1 Release Notes</title>
+    <title>Sweep v1.1.0 Release Notes</title>
     <style>
         :root {
             --bg: #ffffff;
@@ -91,46 +91,40 @@
     </style>
 </head>
 <body>
-<h1>What's New in 1.0.1</h1>
-<h2>Clear browser cookies and history</h2>
-<p>Browser History &amp; Cookies now offers each browser's cookies, and its history older than an age you choose (30 days unless you change it), as separate rows that are never ticked for you. It works with Chrome, Arc, Brave, Edge, Opera, Vivaldi, Firefox, Zen, LibreWolf, Waterfox and Safari's history, and only while that browser is closed</p>
-<p>The cookies of sites you bookmarked, sites you visited in the last 7 days and sites you add in Settings ▸ Browser privacy are kept, all three are on until you turn them off. Passwords, autofill, bookmarks and open tabs are never touched, and Safari's cookies stay in Safari</p>
-<p>Every clean keeps a copy for 7 days and Settings ▸ Browser privacy ▸ Undo puts it back. Firefox keeps its bookmarks in the same file as its history, so Firefox history is put back only if your bookmarks haven't changed since. Sweep deletes the copies the first time it is open after the 7 days, or straight away with Delete undo copies now</p>
-<h2>Empty folders</h2>
-<p>A new Empty Folders list shows folders in your home folder that are empty and haven't changed for 30 days. Nothing is ticked for you and anything you remove goes to the Trash</p>
-<h2>Scheduled cleaning, off until you turn it on</h2>
-<p>Settings ▸ Schedules can clean pure caches, Trash items older than 30 days, or browser cookies and history, weekly unless you pick daily or monthly. Every schedule is off until you switch it on, and nothing else is ever removed without your review</p>
-<p>A schedule runs while Sweep is open, or Sweep can start itself at the time you pick. After each run Sweep tells you what it cleaned, that there was nothing to clean, or why it was skipped. The Trash and browser schedules need Full Disk Access, and the Trash on a drive that doesn't record when something was trashed, such as FAT32 or exFAT, is left alone</p>
+<h1>What's New in 1.1.0</h1>
+<h2>Sweep watches your Mac from the menu bar</h2>
+<p>Sweep now stays in the menu bar when you close its window and checks your Mac every 30 minutes, or every 15 minutes, hour or 3 hours if you pick that in Settings. It tells you when the disk is almost full or filling fast and which app is writing to it, when Time Machine keeps failing or stops making progress, when macOS has moved a lot of memory to disk, and when a program keeps leaving copies in your temp folder. It never deletes anything by itself, and your schedules keep running while the window is closed</p>
+<p>Closing the window also puts it away to give its memory back, the menu-bar icon shows the latest check and opens Sweep again. Sweep now starts when you log in and asks once to send notifications after this update, you can turn either off in Settings</p>
+<h2>Time Machine</h2>
+<ul>
+<li>Sweep never removes local snapshots while a backup is running, removing them then makes the backup fail</li>
+<li>A backup that is holding space can be stopped from the Time Machine Snapshots section, which then releases its space</li>
+<li>The newest snapshot is its own row and is kept unless you tick it</li>
+<li>Optimize ▸ Health shows when your last good backup finished and when Time Machine keeps trying without finishing, including when the disk was too full for its snapshot</li>
+</ul>
 <h2>Clean</h2>
 <ul>
-<li>Each switch in Settings ▸ Scanning now covers every section that reads the same place, turning off external drives also leaves their Trash alone</li>
-<li>Old logs inside sandboxed apps</li>
-<li>Large &amp; old files can also look in /Users/Shared and on connected drives, off until you turn it on</li>
-<li>Duplicates can search up to 8 folders at once and show one type of file at a time</li>
-<li>Select all or none within one section</li>
-<li>The review page says which rows can be undone and how</li>
+<li>A log folder over 1 GB that an app still writes to now offers its logs older than 7 days, they go to the Trash</li>
+<li>Old logs of backup apps can be compressed instead of deleted, every log is kept</li>
+<li>The uv cache waits while uv tools are running instead of failing, and removes only what nothing uses</li>
+<li>Graphics caches of current Chromium browsers are included</li>
+<li>The Docker rows now say that current Docker Desktop hands pruned space back to macOS</li>
 </ul>
-<h2>Monitor, menu bar and updates</h2>
+<h2>Optimize ▸ Health</h2>
 <ul>
-<li>CPU and GPU temperatures, battery age, suggestions for what to clean next, more readings in the menu bar and all-time statistics</li>
-<li>You can hide the menu bar icon</li>
-<li>Turning off Check for updates automatically now really stops the automatic checks</li>
-<li>Sweep now lets macOS rest it when idle and only stays busy while it scans, cleans or uninstalls</li>
-</ul>
-<h2>Uninstall</h2>
-<ul>
-<li>Filters for apps you haven't opened in months and for large apps</li>
-<li>A background job or helper is shown but never ticked for you when it runs a program that isn't the app developer's, or code Sweep can't identify, or when Sweep can't see everything inside a folder</li>
+<li>What is filling your disk, when it is low</li>
+<li>Folders piling up in your temp folder</li>
+<li>A lot of memory moved to disk, with a restart as the fix</li>
 </ul>
 </body>
 </html>
             ]]></description>
-            <pubDate>Thu, 24 Sep 2026 18:05:22 GMT</pubDate>
+            <pubDate>Wed, 11 Nov 2026 09:21:04 GMT</pubDate>
       <enclosure 
-                url="https://github.com/reddeer-tech/sweep/releases/download/v1.0.1/Sweep-1.0.1-macos.dmg" 
-                length="107491100" 
+                url="https://github.com/reddeer-tech/sweep/releases/download/v1.1.0/Sweep-1.1.0-macos.dmg" 
+                length="107615435" 
         type="application/octet-stream" 
-                sparkle:edSignature="ihxQlKlk6LLwj7ybegdKdNpJEEkVpEf/9Q5wGMgn87waa5HgoP0Zsin0nV+R3I6Q2y+x2hgfHpQsNKn1amUKCA==" />
+                sparkle:edSignature="LLFgLAq0gwPipPAx7EpH7nvBaKK81h/lYeqFQCyfe34aTIzJlQYmUXGmbSmJHfebUk0/LV6jXN2cyveLs4+EAg==" />
             <sparkle:minimumSystemVersion>10.13</sparkle:minimumSystemVersion>
     </item>
   </channel>
