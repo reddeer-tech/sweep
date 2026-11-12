@@ -6,17 +6,17 @@
         <description>Most recent updates for Sweep</description>
     <language>en</language>
     <item>
-            <title>Sweep 1.1.1</title>
-            <link>https://github.com/reddeer-tech/sweep/releases/download/v1.1.1/Sweep-1.1.1-macos.dmg</link>
-      <sparkle:version>243</sparkle:version>
-      <sparkle:shortVersionString>1.1.1</sparkle:shortVersionString>
+            <title>Sweep 1.2.0</title>
+            <link>https://github.com/reddeer-tech/sweep/releases/download/v1.2.0/Sweep-1.2.0-macos.dmg</link>
+      <sparkle:version>244</sparkle:version>
+      <sparkle:shortVersionString>1.2.0</sparkle:shortVersionString>
             <description><![CDATA[
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="color-scheme" content="light dark">
-    <title>Sweep v1.1.1 Release Notes</title>
+    <title>Sweep v1.2.0 Release Notes</title>
     <style>
         :root {
             --bg: #ffffff;
@@ -91,43 +91,40 @@
     </style>
 </head>
 <body>
-<h1>What's New in 1.1.1</h1>
-<h2>Nothing is ticked after a scan</h2>
-<p>After a scan every row now starts unticked, so nothing is removed unless you tick it. Select safe still ticks every row Sweep rates as safe in one click, and Quick Clean still picks only those</p>
-<h2>Also new in 1.1.0</h2>
-<h3>Sweep watches your Mac from the menu bar</h3>
-<p>Sweep now stays in the menu bar when you close its window and checks your Mac every 30 minutes, or every 15 minutes, hour or 3 hours if you pick that in Settings. It tells you when the disk is almost full or filling fast and which app is writing to it, when Time Machine keeps failing or stops making progress, when macOS has moved a lot of memory to disk, and when a program keeps leaving copies in your temp folder. It never deletes anything by itself, and your schedules keep running while the window is closed</p>
-<p>Closing the window also puts it away to give its memory back, the menu-bar icon shows the latest check and opens Sweep again. Sweep now starts when you log in and asks once to send notifications after this update, you can turn either off in Settings</p>
-<h3>Time Machine</h3>
+<h1>What's New in 1.2.0</h1>
+<h2>A much lighter menu bar</h2>
+<p>The menu-bar icon now comes from Sweep Menu, a small helper of about 13 MB that stays in the menu bar on its own, so Sweep itself quits when you close its window and gives all its memory back. Sweep Menu starts when you log in, asks once to send notifications, and shows up in System Settings under Login Items. If you switched on the clutter alert, the trashed-app alert or a schedule that runs while Sweep is open, Sweep keeps running in the background for those</p>
+<p>When your Mac starts, only the menu-bar icon appears. Sweep itself no longer opens its window at login, it starts in the background only if an alert or schedule needs it, and otherwise not at all</p>
+<p>Sweep Menu never deletes anything and reads nothing private, every item in its menu opens Sweep where you review and confirm as before</p>
+<h2>The watcher checks much more</h2>
+<p>On top of disk space, Time Machine, swap and temp folders, it now notices</p>
 <ul>
-<li>Sweep never removes local snapshots while a backup is running, removing them then makes the backup fail</li>
-<li>A backup that is holding space can be stopped from the Time Machine Snapshots section, which then releases its space</li>
-<li>The newest snapshot is its own row and is kept unless you tick it</li>
-<li>Optimize ▸ Health shows when your last good backup finished and when Time Machine keeps trying without finishing, including when the disk was too full for its snapshot</li>
+<li>An app or background process that keeps a CPU core busy for half an hour, and tells you when it has gone on for an hour</li>
+<li>Memory that keeps growing without coming back, and tells you when it is heading for running out of memory</li>
+<li>macOS running short of memory, naming the apps using the most</li>
+<li>Your Mac running hot enough that macOS slows it down, and what is keeping it busy</li>
+<li>A kernel panic or an out-of-memory restart since the last check, and background jobs stuck in a crash loop</li>
 </ul>
-<h3>Clean</h3>
+<p>Only the urgent ones send a notification, at most once a day each, the rest show in the menu and in Optimize ▸ Health. All of it comes from counters macOS already keeps, so a check costs a few milliseconds and nothing runs between checks</p>
+<h2>Fixes</h2>
 <ul>
-<li>A log folder over 1 GB that an app still writes to now offers its logs older than 7 days, they go to the Trash</li>
-<li>Old logs of backup apps can be compressed instead of deleted, every log is kept</li>
-<li>The uv cache waits while uv tools are running instead of failing, and removes only what nothing uses</li>
-<li>Graphics caches of current Chromium browsers are included</li>
-<li>The Docker rows now say that current Docker Desktop hands pruned space back to macOS</li>
-</ul>
-<h3>Optimize ▸ Health</h3>
-<ul>
-<li>What is filling your disk, when it is low</li>
-<li>Folders piling up in your temp folder</li>
-<li>A lot of memory moved to disk, with a restart as the fix</li>
+<li>A Time Machine backup that is slow but still counting changes is no longer reported as stuck, and a backup paused by sleep overnight no longer looks stuck in the morning</li>
+<li>A notification about an app whose name has spaces in it no longer repeats at every check</li>
+<li>"Filling fast" is measured over at least 50 minutes, so a big download or build that is deleted again soon no longer raises it</li>
+<li>An old Time Machine backup no longer sends a daily notification when you turned automatic backups off yourself</li>
+<li>Opening Sweep from a notification or from the menu now always brings back its Dock icon and window</li>
+<li>A check skipped while Sweep was busy now runs a couple of minutes later instead of a whole interval later</li>
+<li>Sweep follows the system's light or dark appearance without checking every two seconds</li>
 </ul>
 </body>
 </html>
             ]]></description>
-            <pubDate>Wed, 11 Nov 2026 09:50:38 GMT</pubDate>
+            <pubDate>Thu, 12 Nov 2026 02:18:22 GMT</pubDate>
       <enclosure 
-                url="https://github.com/reddeer-tech/sweep/releases/download/v1.1.1/Sweep-1.1.1-macos.dmg" 
-                length="107615865" 
+                url="https://github.com/reddeer-tech/sweep/releases/download/v1.2.0/Sweep-1.2.0-macos.dmg" 
+                length="108359667" 
         type="application/octet-stream" 
-                sparkle:edSignature="jt+ptxFURhZztoXFTU6cANP0fboFhFgwJU4dXFI6NoPFrkobj22cDT58EslOdTVCnDJ1yhenfTSuJfpC82EoDA==" />
+                sparkle:edSignature="+vYWjrGlDTCjUODFPjGadEJLCLpaHNxA/UKbh9LY4cApMVuiXSrG/o0n0UmEJgC5LZ/Y4XmhdLbhVSO81sVzCg==" />
             <sparkle:minimumSystemVersion>10.13</sparkle:minimumSystemVersion>
     </item>
   </channel>
