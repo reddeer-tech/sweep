@@ -6,17 +6,17 @@
         <description>Most recent updates for Sweep</description>
     <language>en</language>
     <item>
-            <title>Sweep 1.2.2</title>
-            <link>https://github.com/reddeer-tech/sweep/releases/download/v1.2.2/Sweep-1.2.2-macos.dmg</link>
-      <sparkle:version>246</sparkle:version>
-      <sparkle:shortVersionString>1.2.2</sparkle:shortVersionString>
+            <title>Sweep 1.2.3</title>
+            <link>https://github.com/reddeer-tech/sweep/releases/download/v1.2.3/Sweep-1.2.3-macos.dmg</link>
+      <sparkle:version>247</sparkle:version>
+      <sparkle:shortVersionString>1.2.3</sparkle:shortVersionString>
             <description><![CDATA[
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="color-scheme" content="light dark">
-    <title>Sweep v1.2.2 Release Notes</title>
+    <title>Sweep v1.2.3 Release Notes</title>
     <style>
         :root {
             --bg: #ffffff;
@@ -91,8 +91,10 @@
     </style>
 </head>
 <body>
-<h1>What's New in 1.2.2</h1>
-<h2>Opening Sweep from the menu bar works again</h2>
+<h1>What's New in 1.2.3</h1>
+<h2>Sweep's icon on its notifications</h2>
+<p>Notifications from Sweep's menu-bar icon, like low disk space, Time Machine, memory and heat alerts, now show Sweep's icon instead of a blank one</p>
+<h2>Also in 1.2.2</h2>
 <p>In 1.2.1, choosing Open Sweep, Scan My Mac, Quick Clean or Settings in the menu-bar menu, or clicking a low-disk notification, started Sweep without ever showing its window when Sweep was not already open, and later clicks did nothing. Sweep now opens every time</p>
 <p>If a Sweep from 1.2.1 is stuck like that, Force Quit it (Option-click its Dock icon, or use Activity Monitor), then open Sweep again</p>
 <h2>Also in 1.2.1</h2>
@@ -125,12 +127,12 @@
 </body>
 </html>
             ]]></description>
-            <pubDate>Thu, 12 Nov 2026 16:26:24 GMT</pubDate>
+            <pubDate>Thu, 12 Nov 2026 17:57:39 GMT</pubDate>
       <enclosure 
-                url="https://github.com/reddeer-tech/sweep/releases/download/v1.2.2/Sweep-1.2.2-macos.dmg" 
-                length="108376203" 
+                url="https://github.com/reddeer-tech/sweep/releases/download/v1.2.3/Sweep-1.2.3-macos.dmg" 
+                length="109386870" 
         type="application/octet-stream" 
-                sparkle:edSignature="RfneDLfTUyUYkgDH1JtRYrhFaSbnnx9WqhFsIMFuZumy74LAAwiqQH83qYnYzMTLeMCSWkPVvgkbHcbL2ultBg==" />
+                sparkle:edSignature="n/+nu+5oxio9zVS/5N4semFi18RYTLR57v4ULqVKOqzqyhAXOF7DfaVpIBhqskk4h0Yhjdsid83FTySda8RtBA==" />
             <sparkle:minimumSystemVersion>10.13</sparkle:minimumSystemVersion>
     </item>
   </channel>
