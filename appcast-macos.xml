@@ -6,17 +6,17 @@
         <description>Most recent updates for Sweep</description>
     <language>en</language>
     <item>
-            <title>Sweep 1.2.0</title>
-            <link>https://github.com/reddeer-tech/sweep/releases/download/v1.2.0/Sweep-1.2.0-macos.dmg</link>
-      <sparkle:version>244</sparkle:version>
-      <sparkle:shortVersionString>1.2.0</sparkle:shortVersionString>
+            <title>Sweep 1.2.1</title>
+            <link>https://github.com/reddeer-tech/sweep/releases/download/v1.2.1/Sweep-1.2.1-macos.dmg</link>
+      <sparkle:version>245</sparkle:version>
+      <sparkle:shortVersionString>1.2.1</sparkle:shortVersionString>
             <description><![CDATA[
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="color-scheme" content="light dark">
-    <title>Sweep v1.2.0 Release Notes</title>
+    <title>Sweep v1.2.1 Release Notes</title>
     <style>
         :root {
             --bg: #ffffff;
@@ -91,12 +91,15 @@
     </style>
 </head>
 <body>
-<h1>What's New in 1.2.0</h1>
-<h2>A much lighter menu bar</h2>
+<h1>What's New in 1.2.1</h1>
+<h2>The menu-bar icon is back</h2>
+<p>In 1.2.0 the new menu-bar helper, Sweep Menu, could not start, and Sweep hid its own icon anyway, so there was no menu-bar icon at all. Sweep Menu now starts, and Sweep keeps its own icon whenever the helper is not actually running, so the icon is never missing again</p>
+<h2>Also new in 1.2.0</h2>
+<h3>A much lighter menu bar</h3>
 <p>The menu-bar icon now comes from Sweep Menu, a small helper of about 13 MB that stays in the menu bar on its own, so Sweep itself quits when you close its window and gives all its memory back. Sweep Menu starts when you log in, asks once to send notifications, and shows up in System Settings under Login Items. If you switched on the clutter alert, the trashed-app alert or a schedule that runs while Sweep is open, Sweep keeps running in the background for those</p>
 <p>When your Mac starts, only the menu-bar icon appears. Sweep itself no longer opens its window at login, it starts in the background only if an alert or schedule needs it, and otherwise not at all</p>
 <p>Sweep Menu never deletes anything and reads nothing private, every item in its menu opens Sweep where you review and confirm as before</p>
-<h2>The watcher checks much more</h2>
+<h3>The watcher checks much more</h3>
 <p>On top of disk space, Time Machine, swap and temp folders, it now notices</p>
 <ul>
 <li>An app or background process that keeps a CPU core busy for half an hour, and tells you when it has gone on for an hour</li>
@@ -106,7 +109,7 @@
 <li>A kernel panic or an out-of-memory restart since the last check, and background jobs stuck in a crash loop</li>
 </ul>
 <p>Only the urgent ones send a notification, at most once a day each, the rest show in the menu and in Optimize ▸ Health. All of it comes from counters macOS already keeps, so a check costs a few milliseconds and nothing runs between checks</p>
-<h2>Fixes</h2>
+<h3>Fixes</h3>
 <ul>
 <li>A Time Machine backup that is slow but still counting changes is no longer reported as stuck, and a backup paused by sleep overnight no longer looks stuck in the morning</li>
 <li>A notification about an app whose name has spaces in it no longer repeats at every check</li>
@@ -119,12 +122,12 @@
 </body>
 </html>
             ]]></description>
-            <pubDate>Thu, 12 Nov 2026 02:18:22 GMT</pubDate>
+            <pubDate>Thu, 12 Nov 2026 10:58:51 GMT</pubDate>
       <enclosure 
-                url="https://github.com/reddeer-tech/sweep/releases/download/v1.2.0/Sweep-1.2.0-macos.dmg" 
-                length="108359667" 
+                url="https://github.com/reddeer-tech/sweep/releases/download/v1.2.1/Sweep-1.2.1-macos.dmg" 
+                length="108372848" 
         type="application/octet-stream" 
-                sparkle:edSignature="+vYWjrGlDTCjUODFPjGadEJLCLpaHNxA/UKbh9LY4cApMVuiXSrG/o0n0UmEJgC5LZ/Y4XmhdLbhVSO81sVzCg==" />
+                sparkle:edSignature="75CYP8e3kJPeN2MzkbT4a+yq0ONjVcnSP+iMU3pWeVCwuqb9cmLQAW3r/oh9X6vWTNB+2ZBqJdL7TNP0Nd3XCg==" />
             <sparkle:minimumSystemVersion>10.13</sparkle:minimumSystemVersion>
     </item>
   </channel>

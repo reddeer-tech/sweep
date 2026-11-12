@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="color-scheme" content="light dark">
+    <title>Sweep v1.2.1 Release Notes</title>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --fg: #1d1d1f;
+            --muted: #6e6e73;
+            --link: #0066cc;
+            --code-bg: #f0f0f2;
+            --code-fg: #1d1d1f;
+            --border: #d2d2d7;
+            --quote-bg: #f5f5f7;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #1e1e1e;
+                --fg: #f5f5f7;
+                --muted: #a1a1a6;
+                --link: #4ea3ff;
+                --code-bg: #2c2c2e;
+                --code-fg: #f5f5f7;
+                --border: #3a3a3c;
+                --quote-bg: #2c2c2e;
+            }
+        }
+        html, body {
+            background: var(--bg);
+            color: var(--fg);
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+            padding: 20px;
+            line-height: 1.55;
+            font-size: 14px;
+            -webkit-font-smoothing: antialiased;
+        }
+        h1 { font-size: 22px; margin: 0 0 14px; font-weight: 600; }
+        h2 { font-size: 17px; margin: 22px 0 8px; font-weight: 600; }
+        h3 { font-size: 15px; margin: 18px 0 6px; font-weight: 600; }
+        h4, h5, h6 { font-size: 14px; margin: 14px 0 6px; font-weight: 600; }
+        p { margin: 8px 0; }
+        ul, ol { padding-left: 22px; margin: 8px 0; }
+        li { margin: 4px 0; line-height: 1.55; }
+        a { color: var(--link); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        code {
+            background: var(--code-bg);
+            color: var(--code-fg);
+            padding: 1px 5px;
+            border-radius: 4px;
+            font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+            font-size: 12.5px;
+        }
+        pre {
+            background: var(--code-bg);
+            color: var(--code-fg);
+            padding: 10px 12px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-size: 12.5px;
+            line-height: 1.5;
+        }
+        pre code { background: none; padding: 0; border-radius: 0; }
+        blockquote {
+            margin: 10px 0;
+            padding: 6px 12px;
+            border-left: 3px solid var(--border);
+            background: var(--quote-bg);
+            color: var(--muted);
+        }
+        blockquote p { margin: 4px 0; }
+        hr { border: none; border-top: 1px solid var(--border); margin: 16px 0; }
+        strong { font-weight: 600; }
+    </style>
+</head>
+<body>
+<h1>What's New in 1.2.1</h1>
+<h2>The menu-bar icon is back</h2>
+<p>In 1.2.0 the new menu-bar helper, Sweep Menu, could not start, and Sweep hid its own icon anyway, so there was no menu-bar icon at all. Sweep Menu now starts, and Sweep keeps its own icon whenever the helper is not actually running, so the icon is never missing again</p>
+<h2>Also new in 1.2.0</h2>
+<h3>A much lighter menu bar</h3>
+<p>The menu-bar icon now comes from Sweep Menu, a small helper of about 13 MB that stays in the menu bar on its own, so Sweep itself quits when you close its window and gives all its memory back. Sweep Menu starts when you log in, asks once to send notifications, and shows up in System Settings under Login Items. If you switched on the clutter alert, the trashed-app alert or a schedule that runs while Sweep is open, Sweep keeps running in the background for those</p>
+<p>When your Mac starts, only the menu-bar icon appears. Sweep itself no longer opens its window at login, it starts in the background only if an alert or schedule needs it, and otherwise not at all</p>
+<p>Sweep Menu never deletes anything and reads nothing private, every item in its menu opens Sweep where you review and confirm as before</p>
+<h3>The watcher checks much more</h3>
+<p>On top of disk space, Time Machine, swap and temp folders, it now notices</p>
+<ul>
+<li>An app or background process that keeps a CPU core busy for half an hour, and tells you when it has gone on for an hour</li>
+<li>Memory that keeps growing without coming back, and tells you when it is heading for running out of memory</li>
+<li>macOS running short of memory, naming the apps using the most</li>
+<li>Your Mac running hot enough that macOS slows it down, and what is keeping it busy</li>
+<li>A kernel panic or an out-of-memory restart since the last check, and background jobs stuck in a crash loop</li>
+</ul>
+<p>Only the urgent ones send a notification, at most once a day each, the rest show in the menu and in Optimize ▸ Health. All of it comes from counters macOS already keeps, so a check costs a few milliseconds and nothing runs between checks</p>
+<h3>Fixes</h3>
+<ul>
+<li>A Time Machine backup that is slow but still counting changes is no longer reported as stuck, and a backup paused by sleep overnight no longer looks stuck in the morning</li>
+<li>A notification about an app whose name has spaces in it no longer repeats at every check</li>
+<li>"Filling fast" is measured over at least 50 minutes, so a big download or build that is deleted again soon no longer raises it</li>
+<li>An old Time Machine backup no longer sends a daily notification when you turned automatic backups off yourself</li>
+<li>Opening Sweep from a notification or from the menu now always brings back its Dock icon and window</li>
+<li>A check skipped while Sweep was busy now runs a couple of minutes later instead of a whole interval later</li>
+<li>Sweep follows the system's light or dark appearance without checking every two seconds</li>
+</ul>
+</body>
+</html>
